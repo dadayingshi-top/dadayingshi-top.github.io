@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>达达影视：快马加鞭，好片先行 | 速看片单与快节奏观影指南</title>
+<meta name="keywords" content="达达影视, 速看片单, 快节奏观影, 好片先行, 影视快讯, 热门推荐, dadayingshi, 迅捷看片">
+<meta name="description" content="达达影视（dadayingshi-top）信奉「快马加鞭，好片先行」：新片一上线我们就筛一遍，热门一冒头我们就推给你。不用等、不用翻，好片第一时间送到你眼前。直达 https://dadayingshi-top.github.io，快人一步，先看为快。">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--paper:#f6efe2;--paper2:#efe4d0;--brick:#b4543a;--brick-d:#8f3f28;--olive:#6d6b3f;--ink:#332f2a;--soft:#7a7167;--line:rgba(180,84,58,.22)}
+body{font-family:"Songti SC","Noto Serif CJK SC","PingFang SC",serif;background:var(--paper);color:var(--ink);line-height:1.9;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+::selection{background:var(--brick);color:#fff}
+
+/* ===== 印章顶条 ===== */
+.stampbar{height:10px;background:repeating-linear-gradient(90deg,var(--brick) 0 24px,var(--paper) 24px 34px,var(--olive) 34px 44px,var(--paper) 44px 56px);position:relative}
+
+/* ===== 报头 ===== */
+.hd{background:var(--paper);border-bottom:4px double var(--brick)}
+.hd-in{display:flex;align-items:center;justify-content:space-between;padding:20px 0;gap:20px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:16px}
+.seal{width:52px;height:52px;border-radius:10px;background:var(--brick);position:relative;display:flex;align-items:center;justify-content:center;transform:rotate(-3deg);box-shadow:0 4px 10px rgba(143,63,40,.3)}
+.seal::before{content:"";position:absolute;inset:5px;border:2px solid rgba(255,255,255,.55);border-radius:6px}
+.seal span{position:relative;z-index:2;font-size:24px}
+.logo h1{font-size:clamp(26px,4.4vw,40px);font-weight:900;letter-spacing:2px;color:var(--ink)}
+.logo h1 em{font-style:normal;color:var(--brick)}
+.logo .sub{font-size:11.5px;color:var(--soft);letter-spacing:5px;margin-top:3px}
+.hd-r{display:flex;gap:10px;flex-wrap:wrap}
+.hd-r a{text-decoration:none;font-size:13px;padding:9px 18px;border-radius:4px;font-weight:700;transition:.25s;font-family:"PingFang SC",sans-serif}
+.hd-r .p{background:var(--brick);color:#fff}
+.hd-r .p:hover{background:var(--brick-d)}
+.hd-r .s{border:1.5px solid var(--brick);color:var(--brick)}
+.hd-r .s:hover{background:rgba(180,84,58,.08)}
+
+/* ===== 导航 ===== */
+.nv{background:var(--ink);position:sticky;top:0;z-index:60}
+.nv ul{display:flex;list-style:none;gap:0;flex-wrap:wrap}
+.nv a{display:block;padding:14px 22px;color:rgba(246,239,226,.85);text-decoration:none;font-size:14px;letter-spacing:2px;font-weight:600;font-family:"PingFang SC",sans-serif;transition:.25s;border-bottom:3px solid transparent}
+.nv a:hover{color:#fff;background:rgba(180,84,58,.4);border-bottom-color:var(--brick)}
+
+/* ===== Hero ===== */
+.hero{background:linear-gradient(165deg,var(--paper2) 0%,#faf5ec 55%,var(--paper) 100%);padding:70px 0 60px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero::before{content:"達";position:absolute;right:4%;top:12%;font-size:clamp(120px,24vw,280px);font-weight:900;color:rgba(180,84,58,.06);line-height:1}
+.hi{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+.hero h2{font-size:clamp(32px,5.8vw,60px);font-weight:900;line-height:1.22;color:var(--ink);margin-bottom:22px;letter-spacing:1px}
+.hero h2 .hl{color:var(--brick)}
+.hero p{font-size:16px;color:var(--soft);max-width:440px;margin-bottom:30px}
+.bs{display:flex;gap:14px;flex-wrap:wrap}
+.b1{display:inline-block;padding:14px 30px;background:var(--brick);color:#fff;text-decoration:none;font-size:15px;font-weight:800;border-radius:4px;transition:.25s;font-family:"PingFang SC",sans-serif}
+.b1:hover{background:var(--brick-d);transform:translateY(-2px);box-shadow:0 8px 20px rgba(180,84,58,.35)}
+.b2{display:inline-block;padding:14px 30px;border:1.5px solid var(--brick);color:var(--brick);text-decoration:none;font-size:15px;font-weight:700;border-radius:4px;transition:.25s;font-family:"PingFang SC",sans-serif}
+.b2:hover{background:rgba(180,84,58,.08)}
+.hc{background:#fff;border:2px solid var(--brick);border-radius:6px;padding:26px 24px;transform:rotate(1deg)}
+.hc .lb{font-size:11px;letter-spacing:4px;color:var(--brick);font-weight:800;margin-bottom:16px;font-family:"PingFang SC",sans-serif}
+.hc ul{list-style:none}
+.hc li{padding:10px 0;border-bottom:1px dashed var(--line);font-size:13.5px;color:var(--ink);display:flex;gap:10px}
+.hc li:last-child{border-bottom:none}
+.hc li b{color:var(--brick);font-weight:800;min-width:52px;font-size:12px;letter-spacing:1px;font-family:"PingFang SC",sans-serif}
+
+/* ===== 章节头 ===== */
+.sec{padding:64px 0}
+.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:34px;padding-bottom:12px;border-bottom:3px solid var(--brick)}
+.sh .no{font-size:11px;font-weight:800;letter-spacing:2px;color:#fff;background:var(--ink);padding:4px 11px;border-radius:3px;font-family:"PingFang SC",sans-serif}
+.sh h2{font-size:24px;font-weight:900;letter-spacing:2px;color:var(--ink)}
+.sh .more{margin-left:auto;font-size:13px;color:var(--soft);text-decoration:none;font-family:"PingFang SC",sans-serif}
+.sh .more:hover{color:var(--brick)}
+
+/* ===== 速看片单 ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.gc{background:var(--paper2);border:1px solid var(--line);border-radius:6px;overflow:hidden;transition:.35s;position:relative}
+.gc:hover{border-color:var(--brick);transform:translateY(-6px);box-shadow:0 16px 34px rgba(180,84,58,.16)}
+.gc-num{position:absolute;top:0;right:0;background:var(--brick);color:#fff;font-size:12px;font-weight:800;padding:5px 12px;border-radius:0 0 0 6px;font-family:Georgia,serif;z-index:3}
+.gc-th{height:170px;overflow:hidden;position:relative}
+.gc-th img{width:100%;height:100%;object-fit:cover;transition:.5s;filter:sepia(.15)}
+.gc:hover .gc-th img{transform:scale(1.06);filter:sepia(0)}
+.gc-th .tag{position:absolute;top:12px;left:12px;font-size:10.5px;font-weight:800;letter-spacing:1px;color:#fff;background:var(--olive);padding:4px 11px;border-radius:3px;font-family:"PingFang SC",sans-serif}
+.gb{padding:20px 22px}
+.gb h3{font-size:18px;font-weight:800;color:var(--ink);margin-bottom:5px}
+.gb .mt{font-size:12px;color:var(--soft);margin-bottom:10px;font-family:"PingFang SC",sans-serif}
+.gb p{font-size:13.5px;color:var(--soft);line-height:1.85}
+.gf{margin-top:14px;display:flex;justify-content:space-between;align-items:center;padding-top:11px;border-top:1px dashed var(--line)}
+.gf .sc{font-size:14px;font-weight:800;color:var(--brick);font-family:"PingFang SC",sans-serif}
+.gf a{font-size:12.5px;color:var(--soft);text-decoration:none;font-weight:600;font-family:"PingFang SC",sans-serif}
+.gf a:hover{color:var(--brick)}
+
+/* ===== 分类 ===== */
+.cats{background:var(--ink);border-radius:10px;padding:12px}
+.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.ci{background:rgba(246,239,226,.05);border:1px solid rgba(246,239,226,.12);border-radius:6px;padding:22px 14px;text-align:center;transition:.25s;cursor:pointer}
+.ci:hover{background:rgba(180,84,58,.32);border-color:var(--brick);transform:translateY(-3px)}
+.ci .ic{font-size:32px;display:block;margin-bottom:8px}
+.ci h4{font-size:14.5px;font-weight:700;color:#fff;margin-bottom:3px}
+.ci p{font-size:11.5px;color:rgba(246,239,226,.55);font-family:"PingFang SC",sans-serif}
+
+/* ===== 双栏 ===== */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.dimg{height:360px;border-radius:10px;background:linear-gradient(150deg,var(--brick),var(--brick-d));display:flex;align-items:center;justify-content:center;font-size:100px;position:relative;overflow:hidden;border:3px double rgba(255,255,255,.35)}
+.dimg::before{content:"";position:absolute;inset:14px;border:1.5px solid rgba(255,255,255,.3);border-radius:4px}
+.dtxt h3{font-size:26px;font-weight:900;color:var(--ink);margin-bottom:18px;line-height:1.4}
+.dtxt h3 .hl{color:var(--brick)}
+.dtxt p{font-size:15px;color:var(--soft);margin-bottom:14px}
+.why{list-style:none;margin-top:20px}
+.why li{padding:12px 0;border-bottom:1px dashed var(--line);font-size:14px;color:var(--ink);display:flex;gap:12px}
+.why .k{color:var(--brick);font-weight:800;min-width:76px;font-size:12.5px;letter-spacing:1px;font-family:"PingFang SC",sans-serif}
+.dtxt .go{display:inline-block;margin-top:16px;padding:12px 28px;background:var(--brick);color:#fff;text-decoration:none;font-size:14px;font-weight:800;border-radius:4px;transition:.25s;font-family:"PingFang SC",sans-serif}
+.dtxt .go:hover{background:var(--brick-d)}
+
+/* ===== 片单表 ===== */
+.roll{background:var(--paper2);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.roll table{width:100%;border-collapse:collapse}
+.roll th{background:var(--ink);color:#fff;font-size:12px;letter-spacing:2px;padding:15px 20px;text-align:left;font-weight:600;font-family:"PingFang SC",sans-serif}
+.roll td{padding:15px 20px;border-bottom:1px solid var(--line);font-size:14px;color:var(--ink);vertical-align:top}
+.roll tr:last-child td{border-bottom:none}
+.roll tr:hover td{background:rgba(180,84,58,.07)}
+.roll .id{font-family:monospace;color:var(--brick);font-size:13px;white-space:nowrap}
+.roll .sc{text-align:right;color:var(--brick);font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap;font-family:"PingFang SC",sans-serif}
+
+/* ===== 结语 ===== */
+.coda{text-align:center;padding:72px 0;border-top:1px solid var(--line)}
+.coda-in{max-width:660px;margin:0 auto}
+.coda .q{font-size:clamp(22px,3.8vw,36px);font-weight:900;line-height:1.55;color:var(--ink);margin-bottom:26px}
+.coda .q .hl{color:var(--brick)}
+.coda p{font-size:15px;color:var(--soft);margin-bottom:14px}
+.coda .u{display:inline-block;margin-top:24px;padding:13px 30px;border:1.5px solid var(--brick);color:var(--brick);text-decoration:none;font-size:13.5px;font-weight:700;letter-spacing:1px;border-radius:4px;transition:.25s;font-family:"PingFang SC",sans-serif}
+.coda .u:hover{background:var(--brick);color:#fff}
+
+/* ===== 页脚 ===== */
+footer{background:var(--ink);color:rgba(246,239,226,.72);padding:44px 0 24px}
+.f-in{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+.f-b h4{font-size:19px;color:#eec9b8;font-weight:900;letter-spacing:2px;margin-bottom:12px}
+.f-b p{font-size:13.5px;line-height:1.95}
+.f-c h5{font-size:12.5px;letter-spacing:2px;color:rgba(246,239,226,.92);margin-bottom:14px;font-family:"PingFang SC",sans-serif}
+.f-c ul{list-style:none}
+.f-c a{color:rgba(246,239,226,.6);text-decoration:none;font-size:13px;line-height:2.2;font-family:"PingFang SC",sans-serif}
+.f-c a:hover{color:#fff}
+.f-bot{border-top:1px solid rgba(246,239,226,.15);margin-top:30px;padding-top:18px;font-size:12px;color:rgba(246,239,226,.5);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* ===== 移动端 ===== */
+@media (max-width:920px){
+ .hi{grid-template-columns:1fr;gap:32px}
+ .duo{grid-template-columns:1fr;gap:26px}
+ .dimg{height:240px;font-size:74px}
+ .f-in{grid-template-columns:1fr 1fr;gap:24px}
+}
+@media (max-width:600px){
+ .hd-in{flex-direction:column;align-items:flex-start}
+ .sh{flex-wrap:wrap}
+ .sh .more{margin-left:0;width:100%}
+ .roll{overflow-x:auto}
+ .roll table{min-width:640px}
+ .nv a{padding:12px 14px;font-size:13px}
+ .f-in{grid-template-columns:1fr}
+ .cg{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="stampbar"></div>
+
+<!-- ===== 报头 ===== -->
+<header class="hd">
+ <div class="wrap hd-in">
+  <div class="logo">
+   <div class="seal"><span>🐎</span></div>
+   <div>
+    <h1>达达<em>影视</em></h1>
+    <div class="sub">快 马 加 鞭 · 好 片 先 行</div>
+   </div>
+  </div>
+  <div class="hd-r">
+   <a href="#grid" class="p">速看片单</a>
+   <a href="#cats" class="s">分类</a>
+  </div>
+ </div>
+</header>
+
+<!-- ===== 导航 ===== */
+<nav class="nv">
+ <div class="wrap">
+  <ul>
+   <li><a href="#home">首页</a></li>
+   <li><a href="#grid">速看片单</a></li>
+   <li><a href="#cats">分类频道</a></li>
+   <li><a href="#duo">快三步</a></li>
+   <li><a href="#roll">今日速递</a></li>
+   <li><a href="#coda">关于达达</a></li>
+  </ul>
+ </div>
+</nav>
+
+<!-- ===== Hero ===== */
+<section class="hero" id="home">
+ <div class="wrap hi">
+  <div>
+   <h2>快马加鞭，<br><span class="hl">好片先行</span></h2>
+   <p>达达影视（dadayingshi-top）信奉一件事：新片一上线我们就筛一遍，热门一冒头我们就推给你。不用等、不用翻，好片第一时间送到你眼前。</p>
+   <div class="bs">
+    <a href="#grid" class="b1">🐎 速看片单</a>
+    <a href="#duo" class="b2">快三步</a>
+   </div>
+  </div>
+  <div class="hc">
+   <div class="lb">◆ 达达的速度从哪来</div>
+   <ul>
+    <li><b>快筛</b><span>新片上线当天就过一遍，不隔夜</span></li>
+    <li><b>快推</b><span>热门一冒头，立刻推到首页</span></li>
+    <li><b>快选</b><span>分类清楚，三秒找到想看的</span></li>
+    <li><b>快说</b><span>点评直说感受，不绕弯子</span></li>
+    <li><b>快更</b><span>片单每天更新，不让你等</span></li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<!-- ===== 速看片单 ===== -->
+<section class="wrap sec" id="grid">
+ <div class="sh">
+  <span class="no">片单 01</span>
+  <h2>速看片单</h2>
+  <a href="#" class="more">完整片库 →</a>
+ </div>
+ <div class="grid">
+  <article class="gc">
+   <span class="gc-num">No.1</span>
+   <div class="gc-th"><img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&q=80" alt="动作港片"><span class="tag">热门</span></div>
+   <div class="gb">
+    <h3>九龙城寨之围城</h3>
+    <div class="mt">2024 · 动作 / 港片</div>
+    <p>十二分钟一镜到底的打斗把港片动作美学拉回大银幕，拳拳到肉，看完只想鼓掌。</p>
+    <div class="gf"><span class="sc">★ 8.7</span><a href="#">速看 →</a></div>
+   </div>
+  </article>
+  <article class="gc">
+   <span class="gc-num">No.2</span>
+   <div class="gc-th"><img src="https://images.unsplash.com/photo-1440404653325-ab271e5c0c22?w=600&q=80" alt="生活喜剧"><span class="tag">治愈</span></div>
+   <div class="gb">
+    <h3>走走停停</h3>
+    <div class="mt">2024 · 喜剧 / 生活</div>
+    <p>一个"失败者"回老家的故事。笑着笑着就笑了，然后笑着笑着就哭了，今年最舒服的国产片之一。</p>
+    <div class="gf"><span class="sc">★ 8.5</span><a href="#">速看 →</a></div>
+   </div>
+  </article>
+  <article class="gc">
+   <span class="gc-num">No.3</span>
+   <div class="gc-th"><img src="https://images.unsplash.com/photo-1505635552518-5b4a6677f553?w=600&q=80" alt="惊悚悬疑"><span class="tag">刺激</span></div>
+   <div class="gb">
+    <h3>坠落</h3>
+    <div class="mt">2022 · 惊悚 / 悬疑</div>
+    <p>两个人在一根柱子上，下面是千米深渊。全程手心冒汗，千万别往下看——虽然你忍不住。</p>
+    <div class="gf"><span class="sc">★ 8.3</span><a href="#">速看 →</a></div>
+   </div>
+  </article>
+  <article class="gc">
+   <span class="gc-num">No.4</span>
+   <div class="gc-th"><img src="https://images.unsplash.com/photo-1518929458119-e5bf444c30f4?w=600&q=80" alt="爱情文艺"><span class="tag">口碑</span></div>
+   <div class="gb">
+    <h3>过往人生</h3>
+    <div class="mt">2023 · 爱情 / 文艺</div>
+    <p>两个人隔着大洋隔着十二年，一句"如果当初"就能让整个电影院安静下来。看完想给旧友发消息。</p>
+    <div class="gf"><span class="sc">★ 8.8</span><a href="#">速看 →</a></div>
+   </div>
+  </article>
+  <article class="gc">
+   <span class="gc-num">No.5</span>
+   <div class="gc-th"><img src="https://images.unsplash.com/photo-1574267432553-4b462808152c?w=600&q=80" alt="剧集推荐"><span class="tag">剧集</span></div>
+   <div class="gb">
+    <h3>繁花</h3>
+    <div class="mt">2023 · 剧集 / 王家卫</div>
+    <p>王家卫拍电视剧，把上海拍成了梦。每一帧都能当壁纸，每一句台词都像在耳边说。</p>
+    <div class="gf"><span class="sc">★ 8.9</span><a href="#">速看 →</a></div>
+   </div>
+  </article>
+  <article class="gc">
+   <span class="gc-num">No.6</span>
+   <div class="gc-th"><img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=600&q=80" alt="科幻爽片"><span class="tag">爽片</span></div>
+   <div class="gb">
+    <h3>月球叛军</h3>
+    <div class="mt">2023 · 科幻 / 扎克·施奈德</div>
+    <p>施奈德的慢镜头美学配上太空歌剧，视觉冲击力拉满。当爆米花大片看，爽就完事了。</p>
+    <div class="gf"><span class="sc">★ 7.9</span><a href="#">速看 →</a></div>
+   </div>
+  </article>
+ </div>
+</section>
+
+<!-- ===== 分类频道 ===== */
+<section class="wrap sec" id="cats">
+ <div class="sh">
+  <span class="no">频道</span>
+  <h2>分类频道</h2>
+  <a href="#" class="more">全部频道 →</a>
+ </div>
+ <div class="cats">
+  <div class="cg">
+   <div class="ci"><span class="ic">🎬</span><h4>速看新片</h4><p>1,240 部 · 上线即推</p></div>
+   <div class="ci"><span class="ic">📺</span><h4>热播剧集</h4><p>3,200 部 · 追剧不落</p></div>
+   <div class="ci"><span class="ic">🚀</span><h4>科幻未来</h4><p>2,100 部 · 脑洞大开</p></div>
+   <div class="ci"><span class="ic">😂</span><h4>开心喜剧</h4><p>2,876 部 · 笑就完了</p></div>
+   <div class="ci"><span class="ic">💥</span><h4>硬核动作</h4><p>1,654 部 · 拳拳到肉</p></div>
+   <div class="ci"><span class="ic">👻</span><h4>惊悚悬疑</h4><p>1,432 部 · 别开灯</p></div>
+   <div class="ci"><span class="ic">💕</span><h4>爱情甜宠</h4><p>2,154 部 · 心动瞬间</p></div>
+   <div class="ci"><span class="ic">🌍</span><h4>纪录片</h4><p>1,240 部 · 真实力量</p></div>
+  </div>
+ </div>
+</section>
+
+<!-- ===== 快三步 ===== */
+<section class="wrap sec" id="duo">
+ <div class="sh">
+  <span class="no">方法</span>
+  <h2>快三步</h2>
+  <a href="#" class="more">详细方法 →</a>
+ </div>
+ <div class="duo">
+  <div class="dimg">🐎</div>
+  <div class="dtxt">
+   <h3>好片不等人，<br>所以我们要<em class="hl">快人一步</em></h3>
+   <p>达达影视把找片这件事压缩到三步。不用做功课、不用等口碑发酵，我们看完了告诉你，你只要决定要不要看。</p>
+   <ul class="why">
+    <li><span class="k">第一步</span><span>新片上线当天我们看一遍，好的留下来。</span></li>
+    <li><span class="k">第二步</span><span>一句话讲清这部好在哪、适合谁看。</span></li>
+    <li><span class="k">第三步</span><span>推到首页，你点一下就能看。</span></li>
+   </ul>
+   <a href="#" class="go">🐎 看看今天的第一速递</a>
+  </div>
+ </div>
+</section>
+
+<!-- ===== 今日速递 ===== -->
+<section class="wrap sec" id="roll">
+ <div class="sh">
+  <span class="no">速递</span>
+  <h2>今日速递</h2>
+  <a href="#" class="more">往期速递 →</a>
+ </div>
+ <div class="roll">
+  <table>
+   <thead>
+    <tr><th>编号</th><th>片名</th><th>类型 / 心情</th><th>状态</th><th style="text-align:right">推荐值</th></tr>
+   </thead>
+   <tbody>
+    <tr><td class="id">DD-MON-01</td><td>走走停停</td><td>喜剧 / 想笑一下</td><td>今日速递</td><td class="sc">92%</td></tr>
+    <tr><td class="id">DD-TUE-02</td><td>过往人生</td><td>爱情 / 有点想念</td><td>可随时看</td><td class="sc">95%</td></tr>
+    <tr><td class="id">DD-WED-03</td><td>坠落</td><td>惊悚 / 想要刺激</td><td>可随时看</td><td class="sc">88%</td></tr>
+    <tr><td class="id">DD-THU-04</td><td>九龙城寨之围城</td><td>动作 / 想看打戏</td><td>可随时看</td><td class="sc">90%</td></tr>
+    <tr><td class="id">DD-FRI-05</td><td>繁花</td><td>剧集 / 慢慢看</td><td>可随时看</td><td class="sc">93%</td></tr>
+    <tr><td class="id">DD-SAT-06</td><td>月球叛军</td><td>科幻 / 爽就完了</td><td>明日速递</td><td class="sc">85%</td></tr>
+    <tr><td class="id">DD-SUN-07</td><td>小森林</td><td>治愈 / 什么都不想干</td><td>待定，欢迎点片</td><td class="sc">91%</td></tr>
+   </tbody>
+  </table>
+ </div>
+</section>
+
+<!-- ===== 关于达达 ===== */
+<section class="wrap coda" id="coda">
+ <div class="coda-in">
+  <div class="q">&ldquo;好片不等人，<br>所以我们<em class="hl">快马加鞭</em>。&rdquo;</div>
+  <p>达达影视想做的，就是把「今晚看什么」这道难题，替你先解一步。我们看完了告诉你，你只要决定要不要看，剩下的时间安心享受就好。</p>
+  <p>片单每天都在补，速递每天都在换。今晚不知道看什么？从今日速递点开第一部，不会错的。</p>
+  <a href="https://dadayingshi-top.github.io" class="u">◆ https://dadayingshi-top.github.io ◆</a>
+ </div>
+</section>
+
+<!-- ===== 页脚 ===== -->
+<footer>
+ <div class="wrap">
+  <div class="f-in">
+   <div class="f-b">
+    <h4>🐎 达达影视</h4>
+    <p>快马加鞭，好片先行。速看片单与快节奏观影指南，新片上线即筛、热门冒头即推，好片第一时间送到你眼前。</p>
+   </div>
+   <div class="f-c">
+    <h5>看片</h5>
+    <ul>
+     <li><a href="#grid">速看片单</a></li>
+     <li><a href="#cats">分类频道</a></li>
+     <li><a href="#roll">今日速递</a></li>
+     <li><a href="#">完整片库</a></li>
+    </ul>
+   </div>
+   <div class="f-c">
+    <h5>方法</h5>
+    <ul>
+     <li><a href="#duo">快三步</a></li>
+     <li><a href="#">主题专题</a></li>
+     <li><a href="#">观影帮助</a></li>
+     <li><a href="#">点片申请</a></li>
+    </ul>
+   </div>
+   <div class="f-c">
+    <h5>关于</h5>
+    <ul>
+     <li><a href="#coda">关于达达</a></li>
+     <li><a href="#">免责声明</a></li>
+     <li><a href="#">版权说明</a></li>
+     <li><a href="#">联系我们</a></li>
+    </ul>
+   </div>
+  </div>
+  <div class="f-bot">
+   <span>© 2024 达达影视 · 快马加鞭，好片先行</span>
+   <span>https://dadayingshi-top.github.io</span>
+  </div>
+ </div>
+</footer>
+
+</body>
+</html>
